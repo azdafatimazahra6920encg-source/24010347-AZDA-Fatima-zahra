@@ -205,6 +205,7 @@ Réel: Oui (1)             FN              TP
 **Patterns identifiés :**
 - Les erreurs se concentrent probablement sur les individus aux patterns de mobilité ambigus (ni très mobiles, ni très sédentaires)
 - La zone de décision du modèle peut être affinée via l'ajustement du seuil de classification (par défaut 0.5)
+## Code python:matrice de confusion
 ```python
 # Matrix de confusion
 plt.figure(figsize=(8, 6))
