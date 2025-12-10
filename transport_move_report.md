@@ -506,6 +506,17 @@ print(f"Meilleur modèle F1-score CV: {results[best_model_name]['cv_mean']:.3f}"
 print(f"Hyperparamètres optimaux: {results[best_model_name]['best_params']}")
 ```
   <img src="GRAPHE1.png" style="height:150px;margin-right:100px"/>
+
+  ## Matrice de corrélation
+``` Python
+  # Heatmap corrélations (top 10 features)
+plt.figure(figsize=(12, 8))
+top_corr = X_scaled.corrwith(y).abs().nlargest(10).index
+corr_matrix = X_scaled[top_corr].corr()
+sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', center=0)
+plt.title("Corrélations - Top 10 features avec target")
+plt.show()
+```
   <img src="matrice correlation.png" style="height:150px;margin-right:100px"/>
   
 ## 4. Conclusion
